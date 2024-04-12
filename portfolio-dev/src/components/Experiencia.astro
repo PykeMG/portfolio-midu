@@ -1,0 +1,23 @@
+---
+import type { Code } from "astro:components"
+import ExperienciaItem from "./ExperienciaItem.astro"
+
+const Experience = [
+    {
+        title:'Ingeniero de Fábrica de Software - Software Enterprise Services',
+        date:'Enero - 2024',
+        description:'Desarrollador para el Banco Scotiabank usando tecnologias como Genexus 8, AS400 y Angular 13.',
+    },    
+]
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3"> 
+    {Experience.map((experience =>
+        <li class="mb-10 ms-6">
+            <ExperienciaItem {...experience}/>    
+        </li>
+    ))
+    }                 
+</ol>
+
